@@ -1,0 +1,22 @@
+docker run -it --name jupyter-spark -p 8888:8888 jupyter/all-spark-notebook
+
+http://127.0.0.1:8888/?token=8bb98a5072d990b4d16d832f1e53a571ad0a17bb25194dd4
+
+# fetch the list of available containers
+docker ps
+# stop container
+doker container stop jupyter-spark
+# kill a container
+docker kill jupyter-spark
+# restart a container
+docker start 
+
+sudo docker cp bface723f218:/home/jovyan/lab1 docker_temp/
+
+sudo docker run -t --name jupyter-spark -p 8888:8888 -v "$(pwd)":"/jupyter-spark" jupyter/all-spark-notebook
+
+docker inspect jupyter-spark
+
+docker version
+
+sudo docker exec -it bface723f218(container id) bash
